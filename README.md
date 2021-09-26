@@ -17,14 +17,14 @@ The project report contains the definition and the expression of :
 ## BER
 The BER is the average rate of bit error. For instance, if 10 000 bits are transmetted and 100 bits are received in error, then the average BER:
 
-![equation1](https://latex.codecogs.com/gif.latex%5Cfrac%7B%5Ctext%7BNumber%20of%20bits%20in%20error%7D%7D%7B%5Ctext%7BTotal%20number%20of%20bits%20transmitted%7D%7D%20%3D%20%5Cfrac%7B100%7D%7B10000%7D%20%3D%201%25)
+![equation1](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Ctext%7BNumber%20of%20bits%20in%20error%7D%7D%7B%5Ctext%7BTotal%20number%20of%20bits%20transmitted%7D%7D%20%3D%20%5Cfrac%7B100%7D%7B10000%7D%20%3D%201%25)
 
 Since the transmitted and the received bits are random quantities, the BER can also be expressed as probability known as the probability of bit error.
 
 ## Information bits
 
-Note that the information bits are modulated prior to transmission over the channel. One such modulation format is BPSK : Binary Phase Shift Keying, in which, the information symbol 0 is modulated as []!(https://latex.codecogs.com/gif.latex?%5Csqrt%7BP%7D) and the infomation symbol 1 is modulated as 
-[]!(https://latex.codecogs.com/gif.latex?-%5Csqrt%7BP%7D).
+Note that the information bits are modulated prior to transmission over the channel. One such modulation format is BPSK : Binary Phase Shift Keying, in which, the information symbol 0 is modulated as ![](https://latex.codecogs.com/gif.latex?%5Csqrt%7BP%7D) and the infomation symbol 1 is modulated as 
+![](https://latex.codecogs.com/gif.latex?-%5Csqrt%7BP%7D).
 So, there are two phases 0 and 180 degrees. The average power of this modulation format is P.
 
 ## Detection at Receiver
@@ -67,7 +67,7 @@ To sum up, the probability of bit error in AWGN channel for BPSK modulated trans
 
 By defining the SNR : Signal to Noise Power Ratio by : 
 
-![equation1] (https://latex.codecogs.com/gif.latex?%5Ctext%7BSNR%7D%20%3D%20%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D)
+![equation1](https://latex.codecogs.com/gif.latex?%5Ctext%7BSNR%7D%20%3D%20%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D)
 
 Then, the probability of error is thus ![](https://latex.codecogs.com/gif.latex?P_e%20%3D%20Q%28%5Csqrt%7B%5Ctext%7BSNR%7D%7D%29).
 
