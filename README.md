@@ -8,16 +8,16 @@ and we present its bit error rate performance.
 
 The project report contains the definition and the expression of : 
 * [Bit Error Rate ](#BER)
-* [Information bits ](#Information bits)
-* [Detection at Receiver ](#Detection at Receiver)
-* [Model of Wireline Communication system ](#Model of Wireline Communication system)
-* [Probability error expression ](#Probability error expression)
+* [Information bits ](#Information-bits)
+* [Detection at Receiver ](#Detection-at-Receiver)
+* [Model of Wireline Communication system ](#Model-of-Wireline-Communication-system)
+* [Probability error expression ](#Probability-error-expression)
 
 
 ## BER
 The BER is the average rate of bit error. For instance, if 10 000 bits are transmetted and 100 bits are received in error, then the average BER:
 
-![equation](https://latex.codecogs.com/gif.latex%5Cfrac%7B%5Ctext%7BNumber%20of%20bits%20in%20error%7D%7D%7B%5Ctext%7BTotal%20number%20of%20bits%20transmitted%7D%7D%20%3D%20%5Cfrac%7B100%7D%7B10000%7D%20%3D%201%25)
+![equation1](https://latex.codecogs.com/gif.latex%5Cfrac%7B%5Ctext%7BNumber%20of%20bits%20in%20error%7D%7D%7B%5Ctext%7BTotal%20number%20of%20bits%20transmitted%7D%7D%20%3D%20%5Cfrac%7B100%7D%7B10000%7D%20%3D%201%25)
 
 Since the transmitted and the received bits are random quantities, the BER can also be expressed as probability known as the probability of bit error.
 
@@ -36,15 +36,16 @@ This is a threshold based detection.
 
 In the figure bellow, we present a simple model of a wireline communication system, where x is the transmitted symbol, y the received symbol and n is the noise at the receiver.
 
-![](Figure/transportedfir.png)
+![](Figure/modelAWGN.png)
 
 If the noise process is a white Gaussian, then the system model is a AWGN (additive White Gaussian Noise). 
 The noise probability density function for a zero 0 and noise power ![](https://latex.codecogs.com/gif.latex?%5Csigma%5E2) is given by: 
+
 ![equation](https://latex.codecogs.com/gif.latex?F_N%28n%29%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%20%5Csigma%5E2%7D%7De%5E%7B-%5Cfrac%7Bn%5E2%7D%7B2%5Csigma%5E2%7D%7D)
 
 The shape of the pdf is as depicted in the Figure below:
 
-![](Figure/transportedfir.png)
+![](Figure/pdfnoise.png)
 
 ## Probability error expression
 
@@ -55,17 +56,18 @@ The bit error occurs if ![](https://latex.codecogs.com/gif.latex?y%20%5Cgeq%200)
 
 Therefore, the probability of error is given by:
 
-![equation](https://latex.codecogs.com/gif.latexP%28n%20%5Cgeq%20%5Csqrt%7BP%7D%29%20%3D%20%5Cint_%7B%5Csqrt%7BP%7D%7D%5E%7B%5Cinfty%7D%20F_N%28n%29dn%20%3D%20%5Cint_%7B%5Csqrt%7BP%7D%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csigma%20%5Csqrt%7B2%5Cpi%7D%7De%5E%7B%5Cfrac%7Bn%5E2%7D%7B2%5Csigma%5E2%7D%7Ddn%20%3D%20%5Cint_%7B%7B%5Cfrac%7B%5Csqrt%7BP%7D%7D%7B%5Csigma%7D%7D%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt)
+![equation1](https://latex.codecogs.com/gif.latex?P%28n%20%5Cgeq%20%5Csqrt%7BP%7D%29%20%3D%20%5Cint_%7B%5Csqrt%7BP%7D%7D%5E%7B%5Cinfty%7D%20F_N%28n%29dn%20%3D%20%5Cint_%7B%5Csqrt%7BP%7D%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csigma%20%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bn%5E2%7D%7B2%5Csigma%5E2%7D%7Ddn%20%3D%20%5Cint_%7B%7B%5Cfrac%7B%5Csqrt%7BP%7D%7D%7B%5Csigma%7D%7D%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt)
 
 This corresponds to the ![](https://latex.codecogs.com/gif.latex?Q%28%5Csqrt%7B%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D%7D%29) where Q is the qfunction, and it is expressed by:
-![equation](https://latex.codecogs.com/gif.latex?Q%28v%29%20%3D%20%5Cint_v%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7D%20e%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt)
+![equation1](https://latex.codecogs.com/gif.latex?Q%28v%29%20%3D%20%5Cint_v%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7D%20e%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt)
 
 To sum up, the probability of bit error in AWGN channel for BPSK modulated transmission of average power P is given by:
-![equation](https://latex.codecogs.com/gif.latex?Q%28%5Csqrt%7B%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D%7D%29)
+![equation1](https://latex.codecogs.com/gif.latex?Q%28%5Csqrt%7B%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D%7D%29)
 
 
 By defining the SNR : Signal to Noise Power Ratio by : 
-![equation] (https://latex.codecogs.com/gif.latex?%5Ctext%7BSNR%7D%20%3D%20%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D)
+
+![equation1] (https://latex.codecogs.com/gif.latex?%5Ctext%7BSNR%7D%20%3D%20%5Cfrac%7BP%7D%7B%5Csigma%5E2%7D)
 
 Then, the probability of error is thus ![](https://latex.codecogs.com/gif.latex?P_e%20%3D%20Q%28%5Csqrt%7B%5Ctext%7BSNR%7D%7D%29).
 
